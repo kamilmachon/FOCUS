@@ -6,13 +6,39 @@ import imutils
 
 cap = cv2.VideoCapture(0)
 
-while (cap.isOpened()):
-    _,img = cap.read()
-    img=img[100:400, 100:600]
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+while( cap.isOpened() ) :
+    ret, img = cap.read(0)
+    x=300      #wspolrzedne piksela z ktorego pobieramy kolor
+    y=300
+    cv2.circle(img,(x,y),10,(120,120,120),1)
+    color=img[x,y]
+    print color
+    t=15 # +\- do granicy koloru
+    lower_range = np.array([color[0]-t, color[1]-t, color[2]-t], dtype=np.uint8)
+    upper_range = np.array([color[0]+t, color[1]+t, color[2]+t], dtype=np.uint8)
+    mask = cv2.inRange(img, lower_range, upper_range)
+    mask=cv2.medianBlur(mask,15)
 
-    med = cv2.medianBlur(gray, 15)
-    _,thresh = cv2.threshold(med, 70, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+    cv2.putText(img,"press esc when ready, color from the circle will be extracted", (50,50), cv2.FONT_HERSHEY_COMPLEX, 0.5, 255)
+    cv2.imshow('final', img)
+    cv2.imshow('image', mask)
+    k = cv2.waitKey(10)
+    if(k == 27):
+        break
+
+
+while (cap.isOpened()):
+
+    _, img = cap.read()
+    img = img[100:400, 100:600]
+
+    lower_range = np.array([color[0] - t, color[1] - t, color[2] - t], dtype=np.uint8)
+    upper_range = np.array([color[0] + t, color[1] + t, color[2] + t], dtype=np.uint8)
+    mask = cv2.inRange(img, lower_range, upper_range)
+    mask = cv2.medianBlur(mask, 15)
+
+    im = mask
+    ret, thresh = cv2.threshold(im, 127, 255, 0)
 
     cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     cnts = cnts[0] if imutils.is_cv2() else cnts[1]
