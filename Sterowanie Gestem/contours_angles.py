@@ -22,7 +22,7 @@ while (cap.isOpened()):
 
     #rysuje ograniczajacy prostokat
     x,y,w,h=cv2.boundingRect(cnt)
-    cv2.rectangle(roi, (x, y), (x + w, y + h), (0, 0, 255), 0)
+    cv2.rectangle(roi, (x, y), (x + w, y + h), (0, 255, 255), 0)
     #convexhull uwypukla wielokat
     hull = cv2.convexHull(cnt)
 
