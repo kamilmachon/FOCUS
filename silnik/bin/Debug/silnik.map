@@ -1,0 +1,485 @@
+Archive member included because of file (symbol)
+
+d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+                              d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o (exit)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+LOAD obj\Debug\fuse.o
+LOAD obj\Debug\main.o
+LOAD obj\Debug\motor.o
+LOAD d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a
+LOAD d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libm.a
+LOAD d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a
+LOAD d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a
+LOAD d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0x374
+ *(.vectors)
+ .vectors       0x00000000       0x8c d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x0000008c                . = ALIGN (0x2)
+                0x0000008c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000008c        0x0 linker stubs
+ *(.trampolines*)
+                0x0000008c                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000008c                __ctors_start = .
+ *(.ctors)
+                0x0000008c                __ctors_end = .
+                0x0000008c                __dtors_start = .
+ *(.dtors)
+                0x0000008c                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000008c        0x0 d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+                0x0000008c                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000008c        0xc d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000098       0x1a d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+                0x00000098                __do_copy_data
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000b2        0x8 d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+ *(.init9)
+ *(.text)
+ .text          0x000000ba        0x4 d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+                0x000000ba                __vector_22
+                0x000000ba                __vector_28
+                0x000000ba                __vector_1
+                0x000000ba                __vector_32
+                0x000000ba                __vector_34
+                0x000000ba                __vector_24
+                0x000000ba                __vector_12
+                0x000000ba                __bad_interrupt
+                0x000000ba                __vector_6
+                0x000000ba                __vector_31
+                0x000000ba                __vector_3
+                0x000000ba                __vector_23
+                0x000000ba                __vector_30
+                0x000000ba                __vector_25
+                0x000000ba                __vector_11
+                0x000000ba                __vector_13
+                0x000000ba                __vector_17
+                0x000000ba                __vector_19
+                0x000000ba                __vector_7
+                0x000000ba                __vector_27
+                0x000000ba                __vector_5
+                0x000000ba                __vector_33
+                0x000000ba                __vector_4
+                0x000000ba                __vector_9
+                0x000000ba                __vector_2
+                0x000000ba                __vector_21
+                0x000000ba                __vector_15
+                0x000000ba                __vector_29
+                0x000000ba                __vector_8
+                0x000000ba                __vector_26
+                0x000000ba                __vector_14
+                0x000000ba                __vector_10
+                0x000000ba                __vector_16
+                0x000000ba                __vector_18
+                0x000000ba                __vector_20
+ .text          0x000000be        0x0 obj\Debug\fuse.o
+ .text          0x000000be      0x10a obj\Debug\main.o
+                0x000000be                ioinit
+                0x0000011e                main
+ .text          0x000001c8      0x1a8 obj\Debug\motor.o
+                0x00000344                MOTOR5_stop
+                0x00000310                MOTOR4_break
+                0x00000368                MOTOR6_break
+                0x00000270                MOTOR_break
+                0x0000033e                MOTOR5_left
+                0x00000292                MOTOR34_init
+                0x000001e8                MOTOR_drive
+                0x000002ce                MOTOR3_break
+                0x00000354                MOTOR6_right
+                0x00000338                MOTOR5_right
+                0x0000035a                MOTOR6_left
+                0x00000286                MOTOR_sleep
+                0x00000320                MOTOR56_init
+                0x00000360                MOTOR6_stop
+                0x0000029c                MOTOR3_set_speed
+                0x000002de                MOTOR4_set_speed
+                0x000001c8                MOTOR_init
+                0x0000034c                MOTOR5_break
+ .text          0x00000370        0x0 d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+                0x00000370                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00000370        0x0 d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+                0x00000370                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000370        0x0 d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+                0x00000370                exit
+                0x00000370                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000370        0x4 d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000374                _etext = .
+
+.data           0x00800100        0x0 load address 0x00000374
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+ .data          0x00800100        0x0 obj\Debug\fuse.o
+ .data          0x00800100        0x0 obj\Debug\main.o
+ .data          0x00800100        0x0 obj\Debug\motor.o
+ .data          0x00800100        0x0 d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800100                . = ALIGN (0x2)
+                0x00800100                _edata = .
+                0x00800100                PROVIDE (__data_end, .)
+
+.bss            0x00800100        0x0
+                0x00800100                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800100        0x0 d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+ .bss           0x00800100        0x0 obj\Debug\fuse.o
+ .bss           0x00800100        0x0 obj\Debug\main.o
+ .bss           0x00800100        0x0 obj\Debug\motor.o
+ .bss           0x00800100        0x0 d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ *(.bss*)
+ *(COMMON)
+                0x00800100                PROVIDE (__bss_end, .)
+                0x00000374                __data_load_start = LOADADDR (.data)
+                0x00000374                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800100        0x0
+                0x00800100                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800100                PROVIDE (__noinit_end, .)
+                0x00800100                _end = .
+                0x00800100                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse           0x00820000        0x3
+ *(.fuse)
+ .fuse          0x00820000        0x3 obj\Debug\fuse.o
+                0x00820000                __fuse
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x40
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 obj\Debug\main.o
+ .debug_aranges
+                0x00000020       0x20 obj\Debug\motor.o
+
+.debug_pubnames
+                0x00000000      0x186
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x1d obj\Debug\fuse.o
+ .debug_pubnames
+                0x0000001d       0x26 obj\Debug\main.o
+ .debug_pubnames
+                0x00000043      0x143 obj\Debug\motor.o
+
+.debug_info     0x00000000      0x351
+ *(.debug_info)
+ .debug_info    0x00000000       0xae obj\Debug\fuse.o
+ .debug_info    0x000000ae       0x8a obj\Debug\main.o
+ .debug_info    0x00000138      0x219 obj\Debug\motor.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x143
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x73 obj\Debug\fuse.o
+ .debug_abbrev  0x00000073       0x56 obj\Debug\main.o
+ .debug_abbrev  0x000000c9       0x7a obj\Debug\motor.o
+
+.debug_line     0x00000000      0x5d4
+ *(.debug_line)
+ .debug_line    0x00000000       0x83 obj\Debug\fuse.o
+ .debug_line    0x00000083      0x1e8 obj\Debug\main.o
+ .debug_line    0x0000026b      0x369 obj\Debug\motor.o
+
+.debug_frame    0x00000000      0x160
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x30 obj\Debug\main.o
+ .debug_frame   0x00000030      0x130 obj\Debug\motor.o
+
+.debug_str      0x00000000      0x195
+ *(.debug_str)
+ .debug_str     0x00000000       0x7a obj\Debug\fuse.o
+                                 0xae (size before relaxing)
+ .debug_str     0x0000007a       0x13 obj\Debug\main.o
+                                 0x9c (size before relaxing)
+ .debug_str     0x0000008d      0x108 obj\Debug\motor.o
+                                0x197 (size before relaxing)
+
+.debug_loc      0x00000000       0x70
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x70 obj\Debug\motor.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(bin\Debug\silnik.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+MOTOR34_init                                      obj\Debug\motor.o
+                                                  obj\Debug\main.o
+MOTOR3_break                                      obj\Debug\motor.o
+MOTOR3_set_speed                                  obj\Debug\motor.o
+MOTOR4_break                                      obj\Debug\motor.o
+MOTOR4_set_speed                                  obj\Debug\motor.o
+MOTOR56_init                                      obj\Debug\motor.o
+                                                  obj\Debug\main.o
+MOTOR5_break                                      obj\Debug\motor.o
+MOTOR5_left                                       obj\Debug\motor.o
+MOTOR5_right                                      obj\Debug\motor.o
+MOTOR5_stop                                       obj\Debug\motor.o
+MOTOR6_break                                      obj\Debug\motor.o
+MOTOR6_left                                       obj\Debug\motor.o
+MOTOR6_right                                      obj\Debug\motor.o
+MOTOR6_stop                                       obj\Debug\motor.o
+MOTOR_break                                       obj\Debug\motor.o
+MOTOR_drive                                       obj\Debug\motor.o
+                                                  obj\Debug\main.o
+MOTOR_init                                        obj\Debug\motor.o
+                                                  obj\Debug\main.o
+MOTOR_sleep                                       obj\Debug\motor.o
+__bad_interrupt                                   d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__data_end                                        d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__data_load_start                                 d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__data_start                                      d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__do_copy_data                                    d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__fuse                                            obj\Debug\fuse.o
+__heap_end                                        d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__init                                            d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__stack                                           d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_1                                        d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_10                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_11                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_12                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_13                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_14                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_15                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_16                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_17                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_18                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_19                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_2                                        d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_20                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_21                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_22                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_23                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_24                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_25                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_26                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_27                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_28                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_29                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_3                                        d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_30                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_31                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_32                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_33                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_34                                       d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_4                                        d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_5                                        d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_6                                        d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_7                                        d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_8                                        d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_9                                        d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vector_default                                  d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+__vectors                                         d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+_exit                                             d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+exit                                              d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+                                                  d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+ioinit                                            obj\Debug\main.o
+main                                              obj\Debug\main.o
+                                                  d:/programy/avrwin/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o

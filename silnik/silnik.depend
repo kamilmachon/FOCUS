@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1489767253 source:d:\mikroprocki\silnik\fuse.c
+	<avr/io.h>
+
+1496404599 source:d:\mikroprocki\silnik\main.c
+	<avr/io.h>
+	<util/delay.h>
+	"motor.h"
+	"io_cfg.h"
+
+1226065024 d:\mikroprocki\silnik\motor.h
+
+1489767832 source:d:\mikroprocki\silnik\motor.c
+	<inttypes.h>
+	<avr/io.h>
+	<avr/interrupt.h>
+	<util/delay.h>
+	<math.h>
+	<string.h>
+	<stdlib.h>
+	"io_cfg.h"
+	"motor.h"
+
+1229442706 d:\mikroprocki\silnik\io_cfg.h
+
