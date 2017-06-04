@@ -59,11 +59,9 @@ int main(void)
 
     LED1_ON;
     LED2_OFF;
-	DDRC = 0x00; //port C jako wej�cie
-    PORTC |= 0b00000000; //piny nie podci�gane do rezystor�w
-while(1){
     DDRC = 0x00; //port C jako wej�cie
     PORTC |= 0b00000000; //piny nie podci�gane do rezystor�w
+while(1){
     if(PINC == 0b00000001) // ostro prawo
     {
          MOTOR_drive(255,-255);
@@ -105,6 +103,6 @@ while(1){
         LED1_OFF;
         LED2_ON;
     }
-    return 0;
 }
+return 0;
 }
