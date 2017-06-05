@@ -3,10 +3,28 @@ import cv2
 import numpy as np
 import math
 
+def left():
+    file = open('instrukcje.txt','w')
+    file.write('10')
+    file.close()
+def right():
+    file = open('instrukcje.txt','w')
+    file.write('01')
+    file.close()
+def go():
+    file = open('instrukcje.txt','w')
+    file.write('11')
+    file.close()
+def stop():
+    file = open('instrukcje.txt','w')
+    file.write('00')
+    file.close()
+
 cap = cv2.VideoCapture(0)
 while( cap.isOpened() ) :
     ret, img = cap.read(0)
     img = cv2.bilateralFilter(img,17,75,75)
+
     x=300
     y=300
     color = img[x,y]
@@ -67,6 +85,7 @@ while( cap.isOpened() ) :
     cv2.circle(img,(x5,y4),10,(120,120,120),1)
     cv2.circle(img,(x5,y5),10,(120,120,120),1)
     cv2.circle(img,(x6,y6),10,(120,120,120),1)
+
     cv2.putText(img,"press esc when ready, color from the circle will be extracted", (50,50), cv2.FONT_HERSHEY_COMPLEX, 0.5, 255)
     cv2.imshow('image', img)
     cv2.imshow('mask', mask)
@@ -183,19 +202,26 @@ while( cap.isOpened() ) :
     cv2.imshow('Wprost z kamery', img) #wprost z kamery
     cv2.imshow('Osobne kontury', im)
 
-    if solidity>0.7:
-        print 'stop!'
-        if cx<250:
-            print 'left'
-        elif cx>400:
-            print 'right'
-
+    (x,y),(MA,ma),angle = cv2.fitEllipse(cnt)
+    if angle>40 and angle<70:
+        print angle
+        right()
+    elif angle>120 and angle<150:
+        print angle
+        left()
     else:
-        print 'go!'
-        if cx<250:
-            print 'left'
-        elif cx>400:
-            print 'right'
+        if solidity>0.7:
+            stop()
+        else:
+            print 'go!'
+            if cx<250:
+                print angle
+                left()
+            elif cx>400:
+                print angle
+                right()
+            else:
+                go()
 
 
     k = cv2.waitKey(10)
