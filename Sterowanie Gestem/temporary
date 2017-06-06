@@ -1,0 +1,30 @@
+
+def left():
+    file = open('instrukcja.txt','w')
+    file.write('l')
+    file.close()
+def right():
+    file = open('instrukcja.txt','w')
+    file.write('p')
+    file.close()
+def go():
+    file = open('instrukcja.txt','w')
+    file.write('j')
+    file.close()
+def zatrz():
+    file = open('instrukcja.txt','w')
+    file.write('s')
+    file.close()
+def little_left():
+    file = open('instrukcja.txt','ll')
+    file.write('l')
+    file.close()
+def little_right():
+    file = open('instrukcja.txt','pl')
+    file.write('l')
+    file.close()
+def rev():
+    file = open('instrukcja.txt','pl')
+    file.write('w')
+    file.close()
+    
